@@ -1,11 +1,11 @@
+@import 'normalize';
 @import 'colors';
 
 $default-font-size: 1.6rem;
 
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 10px;
@@ -15,6 +15,9 @@ body {
   background-color: #eee;
   font-size: $default-font-size;
 }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 
 .button {
