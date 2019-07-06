@@ -2,10 +2,167 @@
 
 $default-font-size: 1.6rem;
 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
 html {
   font-size: 10px;
 }
 
 body {
+  background-color: #eee;
   font-size: $default-font-size;
+}
+
+
+.button {
+  appearance: none;
+  background: transparent;
+  /* above resets styles */
+  border: none;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover { 
+  color: #161616;
+  background-color: #d2f247;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(4px);
+}
+
+.button--yellow {
+  background-color: $brightYellow;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.price__component__welcome { 
+  padding: 15px 40px 25px 40px;
+}
+
+.price__component__welcome__header {
+  color: $cyan;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.price__componenet__welcome__guarantee {
+  color: $brightYellow;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.price__component__welcome__text {
+  color: $welcomeText;
+  margin: 8px 0;
+  padding: 0;
+}
+
+.price__component__subscription {
+  background-color: $cyan;
+  padding: 15px 40px 40px 40px;
+}
+
+.price__component__subscription__p {
+  color: $whiteText;
+  font-size: 1.6rem;
+  margin-bottom: 35px;
+}
+
+.price__component__subscription__heading, .price__component__why__heading {
+  color: $whiteText;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.price__component__why__feature__list {
+  color: $whiteText;
+  font-size: 1.4rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.price__component__why__feature__list li {
+  padding: 2px 0;
+}
+ 
+.price__component__why {
+  background-color: $cyanSecond;
+  padding: 15px 40px;
+}
+
+.per__month__price {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.per__month__price__dollars {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
+.per__month__price__text {
+  color: $cyanText;
+  font-size: 1.7rem;
+  margin-left: 10px;
+}
+
+
+.price__component {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(83, 83, 83, 0.1), 0 2px 5px 0 rgba(83, 83, 83, 0.1);
+  font-family: 'Karla', sans-serif;
+  font-size: $default-font-size;
+  margin: 5%;
+}
+
+.price__component__why {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+@media only screen and (min-width: 500px)  { 
+
+  .price__component {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "welcome welcome",
+      "subscription why";
+    display: grid;
+    margin: 5% auto;
+    max-width: 800px;
+  }
+
+  .price__component__why {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+  }
+
+  .price__component__subscription {
+    border-bottom-left-radius: 10px;
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+  }
+
+  .price__component__welcome {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 1;
+  }
+
 }
