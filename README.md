@@ -4,9 +4,10 @@ My solution to the Front End Mentor Single Price Grid Component challenge.
 
 I built it using CSS Grid and SASS to practice my skills in each.
 
+View it live at: 
 
+[https://bobmatyas.github.io/fem-single-price-grid/](https://bobmatyas.github.io/fem-single-price-grid/)
 
-![Design preview for the Single Price Grid Component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
